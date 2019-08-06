@@ -22,5 +22,15 @@ pipeline {
         sh 'mvn test'
       }
     }
+    stage('Build') {
+      steps {
+        sh 'mvn package'
+      }
+    }
+    stage('Deploy') {
+      steps {
+        sh 'mvn spring-boot:run'
+      }
+    }
   }
 }
