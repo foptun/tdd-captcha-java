@@ -1,15 +1,18 @@
 package com.example.demo.captcha;
 
 import org.junit.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
 import static org.junit.Assert.assertEquals;
 
+@SpringBootTest
 public class CaptChaTests {
     @Test
     public void operatorPattern_1_ShouldBe_Multiply(){
         Chapcha chapcha = new Chapcha(1,1,3,1);
         String operator = chapcha.getOperator();
 
-        assertEquals("/", operator);
+        assertEquals("fak;jfdkjadsfkjfsdkjadfk;las", operator);
     }
 
     @Test
