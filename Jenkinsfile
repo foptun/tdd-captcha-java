@@ -7,8 +7,17 @@ pipeline {
   }
   stages {
     stage('Start') {
-      steps {
-        echo 'Start Message'
+      parallel {
+        stage('Start') {
+          steps {
+            echo 'Start Message'
+          }
+        }
+        stage('Alert') {
+          steps {
+            input 'Confirm'
+          }
+        }
       }
     }
     stage('Clean') {
