@@ -9,7 +9,7 @@ public class CaptChaTests {
         Chapcha chapcha = new Chapcha(1,1,3,1);
         String operator = chapcha.getOperator();
 
-        assertEquals("*", operator);
+        assertEquals("/", operator);
     }
 
     @Test
