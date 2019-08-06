@@ -35,5 +35,11 @@ pipeline {
         sh 'mvn package'
       }
     }
+    stage('Confirmm') {
+      steps {
+        input '"Xxx"'
+        echo 'xXx'
+      }
+    }
   }
 }
