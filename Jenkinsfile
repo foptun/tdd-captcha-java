@@ -1,8 +1,13 @@
 pipeline {
+  
   agent { label 'docker' }
-  stages ('Start'){
-    step {
-      sh 'docker ps'
+  
+  stages {
+    stage('Step1') {
+      steps {
+        sh 'docker ps'
+      }
     }
   }
+  
 }
