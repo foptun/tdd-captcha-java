@@ -1,13 +1,7 @@
-pipeline {
-  
-  agent { label 'docker' }
-  
-  stages {
-    stage('Step1') {
-      steps {
-        sh 'docker ps'
-      }
-    }
-  }
-  
+node('docker') {
+ 
+    stage 'Checkout'
+        checkout scm
+    stage 'Build & UnitTest'
+        sh "docker ps"
 }
