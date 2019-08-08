@@ -2,7 +2,8 @@ node {
  
     stage 'Checkout'
         checkout scm
-    stage 'Build & UnitTest'
+    stage 'docker ps'
         sh "docker ps"
-        sh "docker-compose -v"
+    stage 'docker-compose ps'
+        sh "docker-compose ps"
 }
