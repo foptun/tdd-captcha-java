@@ -3,7 +3,9 @@ node {
  //stage('Checkout SCM'){
  // checkout scm
 // }
-
+ stage 'PS' 
+  sh 'docker ps'
+ 
  docker.image('node:latest').withRun('') { c ->
   sh 'docker ps'
  }
