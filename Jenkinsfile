@@ -7,9 +7,11 @@ node {
   sh 'docker ps'
  
  docker.image('node:latest').withRun('--name node_test') { c ->
+  docker.image('node:latest').inside("") {
+   sh 'docker ps'
+  }
   sh 'docker ps'
   echo "${c.id}"
-  echo ${c.id}
  }
  
  
