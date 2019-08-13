@@ -1,8 +1,10 @@
 node {
  
- checkout scm
+ stage('Checkout SCM'){
+  checkout scm
+ }
 
- docker.image('node:5').withRun('') { c ->
+ docker.image('node:latest').withRun('') { c ->
      sh 'node -v'
  }
  
