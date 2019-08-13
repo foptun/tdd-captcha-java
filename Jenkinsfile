@@ -1,11 +1,11 @@
 node {
  
  //stage('Checkout SCM'){
-  checkout scm
+ // checkout scm
 // }
 
  docker.image('node:latest').withRun('') { c ->
-     sh 'node -v'
+     sh 'node --version'
  }
  
  
