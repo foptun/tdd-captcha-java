@@ -1,5 +1,10 @@
 node {
- stage 'Checkout'
+ docker.image('node:latest') { c ->
+  echo 'in docker image'
+  sh 'node -v'
+ }
+ 
+/* stage 'Checkout'
   checkout scm
  stage 'docker ps'
   sh "docker ps"
@@ -11,8 +16,6 @@ node {
   echo 'npm install'
 // sh 'npm install
  }
- docker.image('node:latest') { c ->
-  echo 'in docker image'
-  sh 'node -v'
- }
+*/ 
+ 
 }
