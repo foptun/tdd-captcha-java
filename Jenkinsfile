@@ -9,9 +9,6 @@ node {
  docker.image('node:latest').withRun('--name node_test') { c ->
   sh 'docker ps'
   sh 'make check'
-  sh 'which node'
-  sh 'which npm'
-  sh 'which yarn'
  }
  
  
