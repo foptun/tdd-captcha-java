@@ -7,12 +7,20 @@ node {
   sh 'docker ps'
  }
  
+ stage('PS'){ 
+  docker.image('node:latest').withRun('--name node_test') { c ->
+   docker.image('node:latest').inside("") {
+    sh 'node -v'
+   }
+  }
+ }
+ /*
  docker.image('node:latest').withRun('--name node_test') { c ->
   docker.image('node:latest').inside("") {
    sh 'node -v'
   }
  }
- 
+ */
  
  /*
  docker.image('node:latest') { c ->
