@@ -8,10 +8,10 @@ node {
  
  docker.image('node:latest').withRun('--name node_test') { c ->
   docker.image('node:latest').inside("") {
-   sh 'docker ps'
+   sh 'node -v'
   }
-  sh 'docker ps'
-  echo "${c.id}"
+//  sh 'docker ps'
+//  echo "${c.id}"
  }
  
  
