@@ -6,7 +6,7 @@ node {
  stage 'PS' 
   sh 'docker ps'
  
- docker.image('node:latest').withRun('') { c ->
+ docker.image('node:latest').withRun('--name node_test') { c ->
   sh 'docker ps'
  }
  
