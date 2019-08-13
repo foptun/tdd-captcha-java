@@ -7,12 +7,18 @@ node {
   sh 'docker ps'
  }
  
- stage('PS'){ 
+ stage('Node Version'){ 
   docker.image('node:latest').withRun('--name node_test') { c ->
    docker.image('node:latest').inside("") {
     sh 'node -v'
    }
   }
+ }
+ 
+ stage('NPM Install'){
+  docker.image('node:latest').inside("") {
+    sh 'node -v'
+   }
  }
  /*
  docker.image('node:latest').withRun('--name node_test') { c ->
