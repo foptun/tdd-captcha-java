@@ -8,7 +8,7 @@ node {
  
  docker.image('node:latest').withRun('--name node_test') { c ->
   sh 'docker ps'
-  sh 'docker exec node_test ls'
+  sh 'docker exec -it node_test '
  }
  
  
