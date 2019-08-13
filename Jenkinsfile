@@ -9,7 +9,7 @@ node {
   sh "docker-compose -v"
  stage('npm install'){
   echo 'npm install'
-  sh 'npm install
+// sh 'npm install
  }
  docker.image('node:latest') { c ->
   echo 'in docker image'
