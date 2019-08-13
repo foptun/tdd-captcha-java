@@ -1,3 +1,6 @@
+stage('Input'){
+ input 'Deploy Product?'
+}
 node {
  
  stage('Checkout SCM'){
