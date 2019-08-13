@@ -1,5 +1,4 @@
 node {
- agent { docker { image 'node:latest' } }
  stage 'Checkout'
   checkout scm
  stage 'docker ps'
@@ -8,9 +7,9 @@ node {
   sh "which docker-compose"
  stage 'docker-compose -v'
   sh "docker-compose -v"
- stage('End'){
-  echo 'End'
-  
+ stage('npm install'){
+  echo 'npm install'
+  sh 'npm install
  }
  
 }
