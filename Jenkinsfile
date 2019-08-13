@@ -17,7 +17,7 @@ node {
  
  stage('NPM Install'){
   docker.image('node:latest').inside("") {
-    sh 'node -v'
+    sh 'yarn'
    }
  }
  /*
