@@ -1,5 +1,5 @@
 node {
- 
+ agent { docker { image 'node:latest' } }
  stage 'Checkout'
   checkout scm
  stage 'docker ps'
@@ -10,6 +10,7 @@ node {
   sh "docker-compose -v"
  stage('End'){
   echo 'End'
+  
  }
  
 }
