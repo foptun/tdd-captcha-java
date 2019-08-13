@@ -18,6 +18,8 @@ node {
  stage('NPM Install'){
   docker.image('node:latest').inside("") {
     sh 'yarn'
+    sh 'pwd'
+    sh 'ls'
    }
  }
  /*
