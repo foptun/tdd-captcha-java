@@ -1,17 +1,16 @@
 node {
  
- //stage('Checkout SCM'){
- // checkout scm
-// }
- stage 'PS' 
+ stage('Checkout SCM'){
+  checkout scm
+ }
+ stage('PS'){ 
   sh 'docker ps'
+ }
  
  docker.image('node:latest').withRun('--name node_test') { c ->
   docker.image('node:latest').inside("") {
    sh 'node -v'
   }
-//  sh 'docker ps'
-//  echo "${c.id}"
  }
  
  
