@@ -8,7 +8,8 @@ node {
  
  docker.image('node:latest').withRun('--name node_test') { c ->
   sh 'docker ps'
-  echo '${c.id}'
+  echo "${c.id}"
+  echo ${c.id}
  }
  
  
