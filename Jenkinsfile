@@ -5,8 +5,7 @@ node {
 // }
 
  docker.image('node:latest').withRun('') { c ->
-  sh 'make check'
-  sh 'make test'
+  sh 'docker ps'
  }
  
  
